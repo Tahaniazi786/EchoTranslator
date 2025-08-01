@@ -17,18 +17,16 @@ An *AI-powered Multi-Language Translator* that supports both *text and speech tr
 
 ## 🚀 Technologies Used
 
-| Tech | Purpose |
-|------|---------|
-| Streamlit | Web UI |
-| deep_translator | Translation engine |
-| speech_recognition | Speech to text |
-| gTTS | Text to speech |
-| Python | Programming language |
-
+| Technology           | Purpose               |
+|----------------------|------------------------|
+| Streamlit            | Web UI                 |
+| deep_translator      | Translation engine     |
+| speech_recognition   | Speech to text         |
+| gTTS                 | Text to speech         |
+| Python               | Programming language   |
 ---
 
-## 📁 Project Structure# EchoTranslator 🎙🌍
-
+## 📁 Project Structure-EchoTranslator 🎙🌍
 
 ---
 
