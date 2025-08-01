@@ -25,7 +25,8 @@ lang_map = {
 
 # App UI
 st.set_page_config(page_title="Multi-Language Translator", layout="centered")
-st.title("🌐 AI-Powered Multi-Language Translator")
+st.set_page_config(page_title="EchoTranslator", page_icon="🌐")
+st.title("EchoTranslator 🌐🎤")
 
 languages = list(lang_map.keys())
 source_lang_name = st.selectbox("Source Language", languages, index=0)
