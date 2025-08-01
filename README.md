@@ -44,3 +44,7 @@ An *AI-powered Multi-Language Translator* that supports both *text and speech tr
 ```bash
 pip install -r requirements.txt
 streamlit run app.py
+
+## 🔗 Live Demo
+
+[🟢 Click here to try EchoTranslator online](https://tahaniazi786-echotranslator-app-0bve94.streamlit.app/)
