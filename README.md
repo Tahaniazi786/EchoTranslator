@@ -47,4 +47,5 @@ streamlit run app.py
 
 ## 🔗 Live Demo
 
-[🟢 Click here to try EchoTranslator online](https://tahaniazi786-echotranslator-app-0bve94.streamlit.app/)
+[🟢 Click here to try EchoTranslator online]
+(https://tahaniazi786-echotranslator-app-0bve94.streamlit.app/)
