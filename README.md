@@ -24,6 +24,19 @@ An *AI-powered Multi-Language Translator* that supports both *text and speech tr
 | speech_recognition   | Speech to text         |
 | gTTS                 | Text to speech         |
 | Python               | Programming language   |
+
+
+## ⚠ Note on Voice Input
+
+This project includes a voice input feature using the SpeechRecognition and PyAudio libraries, allowing users to speak and translate text in real-time.
+
+However, due to limitations of *Streamlit Cloud, microphone access is **not supported in the deployed version*.  
+As a result, the "Speak and Translate" feature is *disabled online* to avoid errors.
+
+✅ *Text translation* and *audio output* still work perfectly in the live demo.  
+🎤 *Voice input works fully* when the project is run locally on your system.
+
+
 ---
 
 ## 📁 Project Structure-EchoTranslator 🎙🌍
