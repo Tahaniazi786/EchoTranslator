@@ -1,5 +1,5 @@
 import streamlit as st
-from googletrans import Translator
+from deep_translator import GoogleTranslator
 import speech_recognition as sr
 from gtts import gTTS
 import io
@@ -365,26 +365,34 @@ SR_LANG_MAP = {
 # HELPER FUNCTIONS
 # ─────────────────────────────────────────────────────────────────────────────
 def translate_text(text: str, source: str, target: str) -> str:
-    """Translate text using googletrans (Google Translate backend)."""
-    # googletrans uses 'auto' for auto-detect and lowercase codes like 'zh-cn'
-    src = "auto" if source == "auto" else source.lower().replace("zh-cn", "zh-cn").replace("iw", "iw")
-    tgt = target.lower()
-
+    """Translate text using deep-translator (Google Translate backend, Python 3.13 compatible)."""
     try:
-        translator = Translator()
-        result = translator.translate(text, src=src, dest=tgt)
+        # Guard: empty input
+        if not text or not text.strip():
+            return ""
 
-        if result is None or result.text is None:
+        # Guard: same language — no translation needed
+        src = "auto" if source == "auto" else source.lower()
+        tgt = target.lower()
+        if src == tgt:
+            return text
+
+        translator = GoogleTranslator(source=src, target=tgt)
+        result = translator.translate(text.strip())
+
+        # Guard: empty result
+        if not result or not result.strip():
             return "⚠️ Translation returned empty. Please try again."
 
-        return result.text
+        return result
 
     except Exception as exc:
-        # Graceful fallback — show message instead of crashing
-        err = str(exc)
-        if "httpcore" in err or "connect" in err.lower():
+        err = str(exc).lower()
+        if "translation not found" in err or "not valid" in err:
+            return "⚠️ Could not translate. Try shorter text or a different language pair."
+        if "connect" in err or "network" in err or "timeout" in err:
             return "⚠️ Network error — check your internet connection and try again."
-        return f"⚠️ Translation error: {err}"
+        return "⚠️ Translation failed. Please try again in a moment."
 
 
 def text_to_speech(text: str, lang_code: str):
