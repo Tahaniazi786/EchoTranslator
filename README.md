@@ -1,4 +1,4 @@
-﻿# 🌐 EchoTranslator
+# 🌐 EchoTranslator
 
 > **Instantly translate text and audio across 40+ languages — powered by Google AI**
 
@@ -132,7 +132,7 @@ gTTS converts to audio → playback in browser
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/Tahaniazi786/EchoTranslator.git
+git clone https://github.com/your-username/EchoTranslator.git
 cd EchoTranslator
 ```
 
@@ -197,14 +197,6 @@ httpx==0.13.3
 - Google STT API (free tier) may have rate limits on heavy usage
 - Some languages are not supported by gTTS for audio output — audio will be skipped silently
 - `googletrans` is an unofficial Google Translate wrapper — may occasionally be rate-limited
-
----
-
-## 👨‍💻 Developer
-
-**Mohd Taha Salim**  
-AIML Intern @ Safcurl Technologies  
-GitHub: [@Tahaniazi786](https://github.com/Tahaniazi786)
 
 ---
 
