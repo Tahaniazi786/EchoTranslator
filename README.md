@@ -1,10 +1,10 @@
 # 🌐 EchoTranslator
 
-> **Instantly translate text and audio across 40+ languages — powered by Google AI**
+> **Instantly translate text and audio across 40+ languages**
 
 ![Python](https://img.shields.io/badge/Python-3.10%2B-blue?style=for-the-badge&logo=python&logoColor=white)
 ![Streamlit](https://img.shields.io/badge/Streamlit-1.32%2B-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
-![Google Translate](https://img.shields.io/badge/Google%20Translate-API-4285F4?style=for-the-badge&logo=google&logoColor=white)
+![deep-translator](https://img.shields.io/badge/deep--translator-1.11%2B-008080?style=for-the-badge)
 ![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 
 ---
@@ -40,7 +40,7 @@
 |---|---|---|
 | **Language** | Python 3.10+ | Entire project |
 | **UI Framework** | Streamlit | Web interface — no HTML/CSS/JS needed |
-| **Translation** | deep-translator >=1.11.4 | Google Translate engine (Python 3.10+ compatible) |
+| **Translation** | deep-translator >=1.11.4 | Multi-language translation engine |
 | **Speech-to-Text** | SpeechRecognition + Google STT API | Audio → Text |
 | **Text-to-Speech** | gTTS (Google Text-to-Speech) | Text → MP3 audio |
 | **Audio Processing** | pydub + ffmpeg | Convert MP3/OGG/FLAC → WAV |
@@ -66,7 +66,7 @@ EchoTranslator/
 ```
 User types text
       ↓
-deep-translator sends to Google Translate API
+deep-translator translates text
       ↓
 Translated text displayed
       ↓
@@ -192,8 +192,7 @@ pydub>=0.25.1
 ## 🐛 Known Limitations
 
 - Google STT API (free tier) may have rate limits on heavy usage
-- Some languages are not supported by gTTS for audio output — audio will be skipped silently
-- Translation relies on Google's public translation engine — high-frequency bulk requests may experience temporary rate limits
+- Translation engine: high-frequency bulk requests may experience temporary rate limits
 
 ---
 

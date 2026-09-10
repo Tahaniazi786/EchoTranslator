@@ -340,7 +340,7 @@ for k, v in {
 st.markdown("""
 <div class="hero-wrap">
     <h1 class="hero-title">🌐 EchoTranslator</h1>
-    <p class="hero-sub">Instantly translate text &amp; audio across 40+ languages — powered by Google AI</p>
+    <p class="hero-sub">Instantly translate text &amp; audio across 40+ languages</p>
     <div class="pill-row">
         <span class="pill">📝 Text Translation</span>
         <span class="pill">🎤 Audio → Text → Translation</span>
