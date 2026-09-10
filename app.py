@@ -519,10 +519,4 @@ else:
 
 st.markdown('</div>', unsafe_allow_html=True)
 
-# ─────────────────────────────────────────────────────────────────────────────
-# FOOTER
-# ─────────────────────────────────────────────────────────────────────────────
-st.markdown(
-    '<div class="footer">Made with ❤️ using Streamlit · Powered by Google AI</div>',
-    unsafe_allow_html=True,
-)
+

@@ -201,8 +201,4 @@ pydub>=0.25.1
 
 This project is licensed under the **MIT License** — feel free to use, modify, and distribute.
 
----
 
-<div align="center">
-  Made with ❤️ using Streamlit · Powered by Google AI
-</div>
