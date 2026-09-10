@@ -40,7 +40,7 @@
 |---|---|---|
 | **Language** | Python 3.10+ | Entire project |
 | **UI Framework** | Streamlit | Web interface — no HTML/CSS/JS needed |
-| **Translation** | googletrans 4.0.0-rc1 | Google Translate (free) |
+| **Translation** | deep-translator >=1.11.4 | Google Translate engine (Python 3.10+ compatible) |
 | **Speech-to-Text** | SpeechRecognition + Google STT API | Audio → Text |
 | **Text-to-Speech** | gTTS (Google Text-to-Speech) | Text → MP3 audio |
 | **Audio Processing** | pydub + ffmpeg | Convert MP3/OGG/FLAC → WAV |
@@ -66,7 +66,7 @@ EchoTranslator/
 ```
 User types text
       ↓
-googletrans sends to Google Translate API
+deep-translator sends to Google Translate API
       ↓
 Translated text displayed
       ↓
@@ -83,7 +83,7 @@ pydub + ffmpeg converts to WAV (if needed)
       ↓
 SpeechRecognition → Google STT API → transcript
       ↓
-googletrans translates transcript
+deep-translator translates transcript
       ↓
 gTTS converts to audio → playback in browser
 ```
@@ -181,14 +181,11 @@ The app will open at `http://localhost:8501` 🎉
 
 ```txt
 streamlit>=1.32.0
-googletrans==4.0.0-rc1
+deep-translator>=1.11.4
 SpeechRecognition>=3.10.0
 gTTS>=2.4.0
 pydub>=0.25.1
-httpx==0.13.3
 ```
-
-> ⚠️ `httpx==0.13.3` must stay pinned — `googletrans 4.0.0-rc1` is incompatible with newer httpx versions.
 
 ---
 
@@ -196,7 +193,7 @@ httpx==0.13.3
 
 - Google STT API (free tier) may have rate limits on heavy usage
 - Some languages are not supported by gTTS for audio output — audio will be skipped silently
-- `googletrans` is an unofficial Google Translate wrapper — may occasionally be rate-limited
+- Translation relies on Google's public translation engine — high-frequency bulk requests may experience temporary rate limits
 
 ---
 
